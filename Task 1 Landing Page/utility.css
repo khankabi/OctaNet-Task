@@ -1,0 +1,13 @@
+.box{
+    border: 2px solid black;
+
+}
+
+.link{
+    color: rgb(228,114,25);
+    background-color:rgb(253,253,253);
+    padding: 10px;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+}

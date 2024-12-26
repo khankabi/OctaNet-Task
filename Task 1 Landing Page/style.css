@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+}
+
+body {
+    position: relative;
+    background-color: rgb(232, 125, 50);
+
+}
+::selection{
+    color: black;
+    background-color: rgb(232, 125, 50);
+}
+
+main {
+    border: 2px solid black;
+    border-bottom-left-radius: 100px 80px;
+    border-bottom-right-radius: 100px 80px;
+    height: 102vh;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navBar {
+    background-color: rgb(232, 125, 50);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 70vw;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 30px;
+    height: 20px;
+}
+
+.navBar .logo>.logo-text {
+    font-size: 2cqw;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.menu .menu-item ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+
+ul>li {
+    margin: 7px;
+    list-style: none;
+    list-style-position: inside;
+}
+
+li:hover {
+    color: rgba(243, 234, 218, 0.5);
+}
+
+ul>li::after {
+
+    display: block;
+    content: '';
+    border-bottom: 3px solid rgb(58, 55, 55);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+
+}
+
+li:hover::after {
+    transform: scaleX(1);
+
+}
+
+@media only screen and (max-width:750px) {
+
+    .navBar,
+    #youtubeLink {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100%;
+    }
+
+    .container .bigText {
+        font-size: 24px;
+    }
+
+    .banner {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .menu .menu-item ul {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        justify-content: space-evenly;
+        background-color: black;
+    }
+
+}
+
+.banner {
+    margin-top: 10px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+
+.banner>div {
+    width: 45%;
+}
+
+.box1 {
+    width: 10vw;
+    animation: open 2s cubic-bezier(.39, 0, .38, 1);
+}
+@keyframes open {   
+    from {
+        padding: 0 30px;
+        height: 0px;
+    }
+
+    to {
+        height: 221px;
+    }
+}
+
+.box1 .bigText {
+    color: wheat;
+    font-size: 48px;
+}
+
+.box1 .smallText {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.box1 .viewFullSite {
+    width: 50%;
+    border: 2px solid black;
+    box-shadow: 8px 5px 8px rgb(85, 82, 82);
+}
+
+.box1 .viewFullSite:hover {
+    opacity: 0.5;
+    transition: all 250ms ease-in-out;
+
+}
+
+.banner .box2 img {
+    mix-blend-mode: darken;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+
+#youtubeLink {
+    margin-top: 20px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#youtubeLink>div {
+    width: 100%;
+}
+
+.box3 iframe {
+    width: 100%;
+    box-sizing: content-box;
+}
+
+.box4 {
+    margin: auto;
+}
+
+/* ribbon */
+
+.ribbon {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+
+/* cards */
+.cards {
+    margin-top: 20px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-evenly;
+}
+
+.cards .card {
+
+    max-width: 25vw;
+    text-align: center;
+    border: 2px solid black;
+    padding: 2px;
+    margin-right: 0px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.card .checked {
+    color: orange;
+}
+
+.cards .card:hover {
+    transform: scale(1.04);
+    transition: transform 230ms ease-in-out;
+}
+
+.cards .card .dpImage img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 1.5px solid black;
+}
+
+.cards .card .titleText {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cards .card .titleText h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.cards .card .titleText p {
+    margin-top: 0px;
+    color: rgb(247, 218, 164);
+}
+
+/* contanct form */
+.contactinfo {
+    display: flex;
+    justify-content: space-around;
+    /* text-align: center; */
+    border: 2px solid black;
+    padding: 2px;
+    margin-right: 0px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.contactinfo .contactDescption {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column;
+
+}
+
+.contactTitle h1 {
+    color: black;
+    font-weight: 800;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.contactTitle p {
+    color: rgb(102, 79, 37);
+    font-weight: 800;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.connectLinks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.connectLinks a img {
+    width: 28px;
+    height: 28px;
+}
+
+.about p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+.about {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.about::after {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+form {
+    color: black;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #0e0d0d;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    color: black;
+}
+
+input[type=submit] {
+    width: 20%;
+    border: 2px solid black;
+    box-shadow: 8px 5px 8px rgb(85, 82, 82);
+    border-radius: 4px;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 8px 20px;
+    text-align: center;
+}
+
+input[type=submit]:hover {
+    opacity: 0.5;
+    transition: all 250ms ease-in-out;
+}
+
+select option {
+    color: black;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #e7a15118;
+    padding: 20px;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:wheat;
+}
+
